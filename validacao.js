@@ -1,6 +1,15 @@
 function verificaValorValido(chute) {
     const numero = +chute;
+    
+    if (chute === "desisto"){
+        document.body.innerHTML = `
+        <h2>Fim de jogo</h2>
+        <h3>O número secreto era ${numeroSecreto}.</h3>
 
+        <button id="botao-jogar" class="botao-jogar">Jogar Novamente</button>
+        `
+    }
+    
     if (chuteInvalido(numero)) {
         elementoChute.innerHTML += `<div> Valor inválido </div>`;
         return
